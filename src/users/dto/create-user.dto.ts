@@ -37,10 +37,8 @@ export class CreateUserDto {
     address: string;
   
     @ApiProperty()
-    @IsDate()
     createdAt: Date;
   
     @ApiProperty()
-    @IsDate()
     updatedAt: Date;
 }

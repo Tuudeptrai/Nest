@@ -23,9 +23,11 @@ export class UsersService {
     return user;
   }
 
-  findAll() {
-    return `This action returns all users`;
+  async findAll() {
+    const users = await this.userModel.find();
+    return users;
   }
+  
 
   async findOne(id: string) {
     const cleanedId = id.trim();
@@ -37,8 +39,8 @@ export class UsersService {
   }
   
 
-  update(id: string, updateUserDto: UpdateUserDto) {
-    return `This action updates a #${id} user`;
+  async update(updateUserDto: UpdateUserDto) {
+    return await this.userModel.updateOne({_id:updateUserDto._id},{...updateUserDto});
   }
 
   remove(id: string) {
