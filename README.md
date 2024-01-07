@@ -16,6 +16,7 @@ npm install --save @nestjs/mongoose mongoose
 imports: [MongooseModule.forRoot('mongodb://localhost/nest')], add to app.module.ts
 npm i dotenv@16.0.3
 npm i --save-exact @nestjs/config@2.3.1
-
+CRUD:not test
+nest g resource users --no-spec
 =================
 
