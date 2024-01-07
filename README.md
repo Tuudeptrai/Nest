@@ -18,5 +18,8 @@ npm i dotenv@16.0.3
 npm i --save-exact @nestjs/config@2.3.1
 CRUD:not test
 nest g resource users --no-spec
+npm i --save-exact bcryptjs@2.4.3
+npm i --save-dev @types/bcryptjs@2.4.2
+
 =================
 
