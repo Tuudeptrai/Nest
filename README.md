@@ -6,5 +6,6 @@
 Set-ExecutionPolicy RemoteSigned
 nest generate controller user
 nest g resource user
+npm i --save-exact ejs@3.1.9
 =================
 
