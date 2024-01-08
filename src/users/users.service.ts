@@ -43,7 +43,11 @@ export class UsersService {
     return await this.userModel.updateOne({_id:updateUserDto._id},{...updateUserDto});
   }
 
-  remove(id: string) {
-    return `This action removes a #${id} user`;
+  async remove(id: string) {
+    const cleanedId = id.trim();
+    if (!mongoose.Types.ObjectId.isValid(cleanedId)) {
+      return null; 
+    }
+    return await this.userModel.deleteOne({_id:cleanedId});
   }
 }
